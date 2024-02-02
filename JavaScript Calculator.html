@@ -1,0 +1,131 @@
+<html>
+<head>
+<p>TIME</p>
+<style>
+p{border:red 4px solid;
+float:left;
+font-Size:30px;}
+</style>
+
+<p id="demo">ugg</p>
+<b>
+<script type="text/javascript">
+setInterval(watch,1)
+function watch(){
+var date = new Date();
+var hrs = date.getHours();
+var min = date.getMinutes();
+var sec = date.getSeconds();
+var ampm = "AM";
+if (hrs>12){ampm= "PM";}
+if (hrs>12)
+{hrs = hrs - 12;}
+if (hrs == 12)
+{hrs = 12;}
+if (hrs<10){ hrs = '0'+hrs;}
+if (min<10){ min = '0'+min;}
+if (sec<10){ sec = '0'+sec;}
+
+
+document.getElementById("demo").innerHTML=hrs+':'+ min +':'+ sec+''+ampm;
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<style>
+.btn{border:2px solid orange;background-color:rgb(500,0,10);font-size:30px;
+}
+div{margin-top:90px;
+margin-left:299px;
+margin-right:299px;
+margin-bottom:400px;
+border:black 4px inset;
+padding-top:70px;
+padding-bottom:30px;
+background-color:lightgreen;
+
+
+
+}
+.res{border:4px solid black;
+font-size:20px;}
+
+
+</style>
+<center>
+<div>
+ <center>        
+<h1>CALCULATOR</h1>
+</center>
+
+<form>
+<table>
+<tr>
+<td>
+
+<b><input type="text" class="res" id="ans" readonly></b>
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<td><br>
+<input type="button" value="7" class="btn" onClick="ans.value+='7'">
+<input type="button" value="8" class="btn" onClick="ans.value+='8'">
+<input type="button" value="9" class="btn" onClick="ans.value+='9'">
+<input type="button" value="+" class="btn" onClick="ans.value+='+'">
+
+
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="4" class="btn" onClick="ans.value+='4'">
+<input type="button" value="5" class="btn" onClick="ans.value+='5'">
+<input type="button" value="6" class="btn" onClick="ans.value+='6'">
+<input type="button" value="-" class="btn" onClick="ans.value+='-'">
+
+
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="3" class="btn" onClick="ans.value+='3'">
+<input type="button" value="2" class="btn" onClick="ans.value+='2'">
+<input type="button" value="1" class="btn" onClick="ans.value+='1'">
+<input type="button" value="*" class="btn" onClick="ans.value+='*'">
+
+
+</td>
+</tr>
+<tr>
+<td>
+<input type="reset" value="C" class="btn" >
+<input type="button" value="0" class="btn" onClick="ans.value+='0'">
+<input type="button" value="=" class="btn" onClick="ans.value=eval(ans.value)">
+<input type="button" value="/" class="btn" onClick="ans.value+='/'">
+
+
+</td>
+</tr>
+</table>
+</form>
+
+
+
+</div>
+</center>
+
+</body>
+
+
+</html>
